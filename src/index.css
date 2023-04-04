@@ -10,6 +10,7 @@ body {
   font-family: 'Comfortaa', cursive;
   font-weight: 400;
   font-size: 14px;
+
 }
 
 button, a {
@@ -20,3 +21,4 @@ button, a {
   max-width: 1280px;
   margin: 0 auto;
 }
+
