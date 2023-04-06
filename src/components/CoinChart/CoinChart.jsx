@@ -24,6 +24,10 @@ const CoinChart = ({id, btcName}) => {
                     datasets: [{
                         label: `${btcName}`,
                         data: res.data.prices.map(item => item[1]),
+                        fill: true,
+                        borderWidth: 1,
+                        tension: 0
+
                     }]
                 })
             })

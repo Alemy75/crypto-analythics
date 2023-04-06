@@ -30,8 +30,12 @@ const CoinTable = ({coins}) => {
                             </Link>
                         </td>
                         <td>{coin.market_data.current_price.usd} $</td>
-                        <td className={coin.market_data.price_change_percentage_1h_in_currency.usd > 0 ? s.up : s.low}>{coin.market_data.price_change_percentage_1h_in_currency.usd}</td>
-                        <td className={coin.market_data.price_change_percentage_24h_in_currency.usd > 0 ? s.up : s.low}>{coin.market_data.price_change_percentage_24h_in_currency.usd}</td>
+                        <td className={coin.market_data.price_change_percentage_1h_in_currency.usd > 0 ? s.up : s.low}>
+                            {coin.market_data.price_change_percentage_1h_in_currency.usd.toFixed(2)}% {coin.market_data.price_change_percentage_1h_in_currency.usd > 0 ? "⏶" : "⏷"}
+                        </td>
+                        <td className={coin.market_data.price_change_percentage_24h_in_currency.usd > 0 ? s.up : s.low}>
+                            {coin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(2)}% {coin.market_data.price_change_percentage_24h_in_currency.usd > 0 ? "⏶" : "⏷"}
+                        </td>
                         <td>{coin.market_data.total_volume.usd} $</td>
                         <td>{coin.market_data.market_cap.usd} $</td>
                     </tr>
