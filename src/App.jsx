@@ -7,13 +7,13 @@ import ItemPage from "./pages/ItemPage.jsx";
 
 const App = () => {
     return (
-        <div>
+        <React.Fragment>
             <Header/>
             <Routes>
                 <Route path='/' element={<HomePage/>}/>
-                <Route path='/:id' element={<ItemPage/>}/>
+                <Route path='/coins/:id' element={<ItemPage/>}/>
             </Routes>
-        </div>
+        </React.Fragment>
     )
 }
 

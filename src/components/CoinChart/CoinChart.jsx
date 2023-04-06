@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import {Line} from "react-chartjs-2";
-import {Chart as ChartJS} from 'chart.js/auto'
+import { Line } from "react-chartjs-2";
+import { Chart as ChartJS } from 'chart.js/auto'
 
-const CoinChart = ({id, btcName}) => {
+const CoinChart = ({ id, btcName }) => {
     const [days, setDays] = useState(14)
 
     console.log(name)
@@ -22,7 +22,7 @@ const CoinChart = ({id, btcName}) => {
                 setChartData({
                     labels: res.data.prices.map((item, index) => index).reverse(),
                     datasets: [{
-                        label: `${btcName}`,
+                        label: `Изменение цены валюты за ${days} дней`,
                         data: res.data.prices.map(item => item[1]),
                         fill: true,
                         borderWidth: 1,
@@ -33,11 +33,17 @@ const CoinChart = ({id, btcName}) => {
             })
     }, [days])
 
+    console.log(chartData)
+
     return (
-        <div style={{width: '50%'}}>
-            <Line data={chartData}/>
-            <button className='btn-grad' onClick={() => setDays(30)}>За 30 дней</button>
-            <button className='btn-grad' onClick={() => setDays(14)}>За 14 дней</button>
+        <div style={{ width: '50%' }}>
+            <Line data={chartData} />
+            <div>
+                <button className='button' onClick={() => setDays(100)}>За 100 дней</button>
+                <button className='button' onClick={() => setDays(50)}>За 50 дней</button>
+                <button className='button' onClick={() => setDays(30)}>За 30 дней</button>
+                <button className='button' onClick={() => setDays(14)}>За 14 дней</button>
+            </div>
         </div>
     );
 };

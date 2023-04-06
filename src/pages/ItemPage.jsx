@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {Link, useParams} from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import CoinChart from "../components/CoinChart/CoinChart.jsx";
 
 const ItemPage = () => {
-    const {id} = useParams()
+    const { id } = useParams()
 
     const [coin, setCoin] = useState([])
 
@@ -20,8 +20,13 @@ const ItemPage = () => {
                 <Link to='/'>Cписок монет</Link>
                 <span> / {coin.name}</span>
             </div>
-            <p style={{marginTop: 14}}>Диаграмма рынка</p>
-            <CoinChart btcName={coin.name} id={id}/>
+            <p style={{ marginTop: 14 }}>Диаграмма рынка</p>
+            <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: "wrap"}}>
+                <CoinChart btcName={coin.name} id={id} />
+                <CoinChart btcName={coin.name} id={id} />
+                <CoinChart btcName={coin.name} id={id} />
+                <CoinChart btcName={coin.name} id={id} />
+            </div>
         </div>
     );
 };

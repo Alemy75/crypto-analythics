@@ -21,7 +21,7 @@ const CoinTable = ({coins}) => {
                 coins.map((coin, index) => (
                     <tr key={coin.id} className={index % 2 === 0 ? s.second : s.first}>
                         <td>
-                            <Link to={`/${coin.id}`}>
+                            <Link to={`/coins/${coin.id}`}>
                                 <div className={s["coin-title"]}>
                                     <img src={coin.image.large} alt={coin.name}/>
                                     <h3>{coin.name}</h3>
