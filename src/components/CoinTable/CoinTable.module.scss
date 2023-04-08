@@ -3,7 +3,6 @@ table.iksweb {
     border-collapse: collapse;
     width: 100%;
     text-align: center;
-    outline: 8px solid rgb(240, 247, 255);
 }
 table.iksweb tr {
     height: 60px;
@@ -41,7 +40,10 @@ table.iksweb tr:hover {
 table.iksweb tr:hover td {
     cursor: pointer;
 }
-
+.mobile-table {
+    width: 100%; max-width: 100%; overflow-x: auto;
+    outline: 8px solid rgb(240, 247, 255);
+}
 .coin-title {
     display: flex;
     align-items: center;

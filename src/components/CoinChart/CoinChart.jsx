@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from 'chart.js/auto'
+import s from './CoinChart.module.scss'
 
 const CoinChart = ({ id, btcName }) => {
     const [days, setDays] = useState(14)
@@ -36,7 +37,7 @@ const CoinChart = ({ id, btcName }) => {
     console.log(chartData)
 
     return (
-        <div style={{ width: '50%' }}>
+        <div className={s.chart}>
             <Line data={chartData} />
             <div>
                 <button className='button' onClick={() => setDays(100)}>За 100 дней</button>

@@ -10,8 +10,8 @@ const App = () => {
         <React.Fragment>
             <Header/>
             <Routes>
-                <Route path='/' element={<HomePage/>}/>
-                <Route path='/coins/:id' element={<ItemPage/>}/>
+                <Route path='/crypto-analythics/' element={<HomePage/>}/>
+                <Route path='/crypto-analythics/coins/:id' element={<ItemPage/>}/>
             </Routes>
         </React.Fragment>
     )

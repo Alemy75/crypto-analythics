@@ -17,7 +17,7 @@ const ItemPage = () => {
         <div className='container'>
             <h2 className='title'>{coin.name}</h2>
             <div className="breadcrumbs">
-                <Link to='/'>Cписок монет</Link>
+                <Link to='/crypto-analythics/'>Cписок монет</Link>
                 <span> / {coin.name}</span>
             </div>
             <p style={{ marginTop: 14 }}>Диаграмма рынка</p>
